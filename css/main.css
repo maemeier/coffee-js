@@ -220,6 +220,10 @@ body {
     height: 100%;
     width: 50%;
     border-radius: 0.5rem;
+    transition: all 0.3s ease-out;
+  }
+  .btnSlide {
+    left: 50%;
   }
 }
 /* end of video__switch */
