@@ -178,6 +178,15 @@ body {
 .nav__logo:hover {
   background: var(--grey);
 }
+/*  */
+.nav {
+  width: 0;
+  overflow: hidden;
+  transition: all 0.5s linear;
+}
+.nav--show {
+  width: 10rem;
+}
 /* end of nav */
 
 /* video__switch */
