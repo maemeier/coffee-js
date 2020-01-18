@@ -19,10 +19,10 @@ body {
   color: var(--black);
   font-family: "Open Sans", sans-serif;
   background: linear-gradient(
-      rgba(255, 255, 255, 0.85),
-      rgba(255, 255, 255, 0.85)
-    ),
-    url("../img/bodyBcg.jpeg");
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.85)
+  );
+  background: #2c2728;
 }
 
 /* glabal style*/
@@ -294,3 +294,77 @@ body {
   }
 }
 /* end of about section */
+h4 {
+  color: var(--yellow);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.ad-text {
+  padding-bottom: 1.5rem;
+  color: white;
+  font-weight: lighter;
+  font-size: 0.8rem;
+}
+.add-section {
+  margin: 0 auto;
+  justify-content: center;
+}
+.add-text {
+  justify-content: center;
+  text-align: center;
+  margin-top: 3rem;
+  color: var(--grey);
+  letter-spacing: 0.4rem;
+
+  line-height: 2rem;
+}
+.ad-text {
+  color: var(--grey);
+  margin-bottom: 50px;
+  line-height: 1.2rem;
+  font-size: 0.9rem;
+}
+.add-title {
+  text-align: center;
+  margin-top: 10px;
+  color: var(--grey);
+  letter-spacing: 0.2rem;
+}
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+.line {
+  background: var(--yellow);
+  width: 15rem;
+  height: 0.25rem;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.main-grid1 {
+  display: block;
+  margin: 0 auto;
+  max-width: 170px;
+}
+.main-grid2 {
+  display: block;
+  margin: 0 auto;
+  max-width: 170px;
+  text-align: right;
+}
+.left {
+  position: relative;
+  left: 50%;
+}
+.right {
+  position: relative;
+  right: 50%;
+}
+
+/* advertise section */
+
+/* end of advertise section */
