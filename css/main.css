@@ -271,7 +271,9 @@ body {
 /* end of video__switch */
 
 /* about section */
-
+#about {
+  background: white;
+}
 .about-container {
   display: grid;
   grid-template-columns: 100%;
@@ -284,6 +286,7 @@ body {
   display: block;
   height: 100%;
   border-radius: 0.25rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 @media screen and (min-width: 768px) {
   .about__img-special {
@@ -294,77 +297,173 @@ body {
   }
 }
 /* end of about section */
-h4 {
-  color: var(--yellow);
-  text-transform: uppercase;
-  font-weight: 800;
-}
-.ad-text {
-  padding-bottom: 1.5rem;
-  color: white;
-  font-weight: lighter;
-  font-size: 0.8rem;
-}
-.add-section {
-  margin: 0 auto;
-  justify-content: center;
-}
-.add-text {
-  justify-content: center;
-  text-align: center;
-  margin-top: 3rem;
-  color: var(--grey);
-  letter-spacing: 0.4rem;
+@media screen and (min-width: 768px) {
+  h4 {
+    color: var(--yellow);
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+  .coffee {
+    width: 400px;
+  }
+  .ad-text {
+    padding-bottom: 1.5rem;
+    color: white;
+    font-weight: lighter;
+    font-size: 0.8rem;
+  }
+  .add-section {
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .add-text {
+    justify-content: center;
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--grey);
+    letter-spacing: 0.4rem;
 
-  line-height: 2rem;
+    line-height: 2rem;
+  }
+  .ad-text {
+    color: var(--grey);
+    margin-bottom: 50px;
+    line-height: 1.2rem;
+    font-size: 0.9rem;
+  }
+  .add-title {
+    text-align: center;
+    margin-top: 10px;
+    color: var(--grey);
+    letter-spacing: 0.2rem;
+  }
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .line {
+    background: var(--yellow);
+    width: 15rem;
+    height: 0.25rem;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .main-grid1 {
+    display: block;
+    margin: 0 auto;
+    max-width: 170px;
+  }
+  .main-grid2 {
+    display: block;
+    margin: 0 auto;
+    max-width: 170px;
+    text-align: right;
+  }
+  .left {
+    position: relative;
+    left: 50%;
+  }
+  .right {
+    position: relative;
+    right: 50%;
+  }
 }
-.ad-text {
-  color: var(--grey);
-  margin-bottom: 50px;
-  line-height: 1.2rem;
-  font-size: 0.9rem;
-}
-.add-title {
-  text-align: center;
-  margin-top: 10px;
-  color: var(--grey);
-  letter-spacing: 0.2rem;
-}
-.main-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: center;
-  margin: 0 auto;
-  margin-top: 10rem;
-}
-.line {
-  background: var(--yellow);
-  width: 15rem;
-  height: 0.25rem;
-  justify-content: center;
-  margin: 0 auto;
-  margin-top: 10px;
-}
-.main-grid1 {
-  display: block;
-  margin: 0 auto;
-  max-width: 170px;
-}
-.main-grid2 {
-  display: block;
-  margin: 0 auto;
-  max-width: 170px;
-  text-align: right;
-}
-.left {
-  position: relative;
-  left: 50%;
-}
-.right {
-  position: relative;
-  right: 50%;
-}
-
 /* advertise section */
 
 /* end of advertise section */
+
+/* drinking section */
+.drink {
+  color: var(--brightYellow);
+  text-transform: capitalize;
+}
+.drink-form,
+.drink-card {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 70%;
+  justify-content: center;
+  grid-row-gap: 1.25rem;
+}
+.drink-form__feedback {
+  border: 0.1rem solid var(--brightYellow);
+  padding: 0.25rem;
+  display: none;
+}
+.error {
+  display: block;
+  color: red;
+  border-color: red;
+}
+.success {
+  display: block;
+  color: green;
+  border-color: green;
+}
+.drink-form__title,
+.drink-card__title {
+  font-size: 3rem;
+}
+
+.input-name,
+.input-lastname,
+.input-email {
+  width: 100%;
+}
+.input-name,
+.input-lastname,
+.input-email,
+.input-submit {
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: rgba(111, 87, 77, 0.6);
+  color: var(--brown);
+  border: none;
+  outline: none;
+}
+.input-name::placeholder,
+.input-lastname::placeholder,
+.input-email::placeholder {
+  color: var(--darkBrown);
+  text-transform: capitalize;
+}
+.input-submit {
+  background: var(--yellow);
+  color: var(--black);
+  transition: all 0.5s linear;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.input-submit:hover {
+  opacity: 0.8;
+}
+.drink-card__list {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-row-gap: 2rem;
+}
+.person {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  text-align: left;
+  grid-gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+.person_thumbnail {
+  border-radius: 50%;
+}
+@media screen and (min-width: 768px) {
+  .drink-card__list {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+}
