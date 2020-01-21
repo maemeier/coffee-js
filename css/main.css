@@ -562,5 +562,47 @@ body {
 /* end work section */
 
 /* modal section */
+.work-modal {
+  display: none;
+}
 
+.work-modal--show {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.work-modal__item {
+  background: url("../img/work-1.jpeg") center/cover;
+  height: 50vh;
+  width: 80vw;
+}
+@media screen and (min-width: 768px) {
+  .work-modal__item {
+    height: 60vh;
+    width: 60vw;
+    border-radius: 0.4rem;
+    border: 0.5rem solid var(--yellow);
+  }
+}
+.work-modal__close {
+  position: fixed;
+  font-size: 3rem;
+  color: var(--brightYellow);
+  bottom: 5%;
+  right: 5%;
+  transition: color 0.5s linear;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.work-modal__close:hover {
+  color: red;
+}
 /* end modal section */
