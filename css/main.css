@@ -5,7 +5,7 @@
   --darkBrown: #bb9457;
   --yellow: rgb(242, 180, 80);
   --brown: #382923;
-  --black: #191919;
+  --black: #211e1f;
   --grey: #a9b2ac;
 }
 
@@ -22,7 +22,7 @@ body {
     rgba(255, 255, 255, 0.85),
     rgba(255, 255, 255, 0.85)
   );
-  background: #2c2728;
+  background: #211e1f;
 }
 
 /* glabal style*/
@@ -106,6 +106,41 @@ body {
   .header {
     background: url("../img/headerBcg.jpeg") center/cover fixed no-repeat;
   }
+}
+
+/* main grid*/
+
+.main-grid {
+  display: grid;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 150px;
+  margin-bottom: 5rem;
+  max-width: 1500px;
+}
+h4 {
+  color: var(--yellow);
+  justify-content: center;
+  text-align: center;
+}
+p.ad-text {
+  color: white;
+  display: block;
+  text-align: center;
+}
+.line {
+  background: var(--yellow);
+  width: 10rem;
+  height: 0.25rem;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+img.coffee {
+  margin: 0 auto;
+  width: 250px;
+  order: -1;
 }
 
 /* banner*/
@@ -306,15 +341,7 @@ body {
     text-transform: uppercase;
     font-weight: 800;
   }
-  .coffee {
-    width: 400px;
-  }
-  .ad-text {
-    padding-bottom: 1.5rem;
-    color: white;
-    font-weight: lighter;
-    font-size: 0.8rem;
-  }
+
   .add-section {
     margin: 0 auto;
     justify-content: center;
@@ -322,17 +349,18 @@ body {
   .add-text {
     justify-content: center;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 5rem;
     color: var(--grey);
     letter-spacing: 0.4rem;
 
     line-height: 2rem;
   }
-  .ad-text {
+  p.ad-text {
     color: var(--grey);
     margin-bottom: 50px;
     line-height: 1.2rem;
     font-size: 0.9rem;
+    visibility: visible;
   }
   .add-title {
     text-align: center;
@@ -345,8 +373,9 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     margin: 0 auto;
-    margin-top: 5rem;
+    margin-top: 150px;
     margin-bottom: 5rem;
+    max-width: 1500px;
   }
   .line {
     background: var(--yellow);
@@ -374,6 +403,11 @@ body {
   .right {
     position: relative;
     right: 50%;
+  }
+  img.coffee {
+    margin: 0 auto;
+    width: 100%;
+    order: 0;
   }
 }
 /* advertise section */
@@ -527,9 +561,7 @@ body {
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
       "one one two three"
-      "one one four four"
-      "five six seven seven"
-      "eight nine seven seven";
+      "one one four four";
   }
   .item-1 {
     grid-area: one;
@@ -542,21 +574,6 @@ body {
   }
   .item-4 {
     grid-area: four;
-  }
-  .item-5 {
-    grid-area: five;
-  }
-  .item-6 {
-    grid-area: six;
-  }
-  .item-7 {
-    grid-area: seven;
-  }
-  .item-8 {
-    grid-area: eight;
-  }
-  .item-9 {
-    grid-area: nine;
   }
 }
 /* end work section */
