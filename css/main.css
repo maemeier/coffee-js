@@ -580,15 +580,15 @@ body {
 }
 .work-modal__item {
   background: url("../img/work-1.jpeg") center/cover;
-  height: 50vh;
+  height: 70vh;
   width: 80vw;
+  border: 0.5rem solid var(--yellow);
+  border-radius: 0.4rem;
 }
 @media screen and (min-width: 768px) {
   .work-modal__item {
-    height: 60vh;
+    height: 80vh;
     width: 60vw;
-    border-radius: 0.4rem;
-    border: 0.5rem solid var(--yellow);
   }
 }
 .work-modal__close {
@@ -605,4 +605,5 @@ body {
 .work-modal__close:hover {
   color: red;
 }
+
 /* end modal section */
