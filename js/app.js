@@ -34,6 +34,13 @@ function addEventListeners() {
       console.log(value);
 
       if (value) {
+        let customer = new Customer(name, lastname, email);
+        console.log(customer);
+
+        ui.addCustomer(customer);
+
+        ui.showFeedback(" customer added to the list", "sucess");
+        ui.clearFileds();
       } else {
         ui.showFeedback("please fill all form", "error");
       }
@@ -71,8 +78,11 @@ UI.prototype.checkEmpty = function(name, lastname, email) {
 
 UI.prototype.showFeedback = function(text, type) {
   if (type === "sucess") {
+    const feedback = document.querySelector(".drink-form__feedback");
+    feedback.classList.add("sucess");
+    feedback.innerText = text;
+    this.removeAlert("sucess");
   } else if (type === "error") {
-    let feedback = document.querySelector(".drink-form__feedback");
     feedback.classList.add("error");
     feedback.innerText = text;
     this.removeAlert("error");
@@ -84,3 +94,31 @@ UI.prototype.removeAlert = function(type) {
     document.querySelector(".drink-form__feedback").classList.remove(type);
   }, 3000);
 };
+// add Customer
+UI.prototype.addCustomer = function(customer) {
+  const images = [1, 2, 3, 4, 5];
+  let random = Math.floor(Math.random() * images.length);
+  const div = document.createElement("div");
+  div.classList.add(".person");
+  div.innerHTML = `<img
+    src="img/person-${random}.jpeg"
+    alt="profile"
+    class="person_thumbnail"
+  />
+  <h4 class="person__name">${customer.name}</h4>
+  <h4 class="person__last-name">${customer.lastname}</h4>`;
+  document.querySelector(".drink-card__list").appendChild(div);
+};
+// clear
+UI.prototype.clearFileds = function() {
+  document.querySelector(".input-name").value = "";
+  document.querySelector(".input-lastname").value = "";
+  document.querySelector(".input-email").value = "";
+};
+
+//
+function Customer(name, lastname, email) {
+  this.name = name;
+  this.lastname = lastname;
+  this.email = email;
+}
