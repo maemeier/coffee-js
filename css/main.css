@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=La+Belle+Aurore|Open+Sans");
 
 :root {
-  --brightYellow: #e3b505;
+  --brightYellow: #cca97a;
   --darkBrown: #bb9457;
-  --yellow: rgb(242, 180, 80);
+  --yellow: #9a7f5c;
   --brown: #382923;
   --black: #211e1f;
   --grey: #a9b2ac;
@@ -22,7 +22,7 @@ body {
     rgba(255, 255, 255, 0.85),
     rgba(255, 255, 255, 0.85)
   );
-  background: #211e1f;
+  background: #1a1819;
 }
 
 /* glabal style*/
@@ -555,13 +555,14 @@ img.coffee {
 }
 @media screen and (min-width: 992px) {
   .work-container {
-    height: 100vh;
+    height: 500px;
+
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "one one two three"
-      "one one four four";
+      "one one two four";
   }
   .item-1 {
     grid-area: one;
@@ -624,3 +625,76 @@ img.coffee {
 }
 
 /* end modal section */
+
+/* contact */
+.contact-container {
+  max-width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-row-gap: 1rem;
+}
+.contact-info {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+.contact-item {
+  margin: 1rem 0;
+  padding: 0.5rem;
+}
+.contact-item__icon {
+  font-size: 2rem;
+  color: var(--yellow);
+}
+.contact-item__title {
+  text-transform: uppercase;
+  margin: 0.5rem 0;
+  letter-spacing: 0.25rem;
+  color: var(--yellow);
+}
+.contact-item__text {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  letter-spacing: 0.1rem;
+  color: var(--grey);
+}
+@media screen and (min-width: 768px) {
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .contact-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    order: 0;
+  }
+  .contact-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 2rem;
+  }
+  .contact-map {
+    align-self: center;
+  }
+
+  .contact-item__icon {
+    font-size: 1.5rem;
+    color: var(--yellow);
+  }
+  .contact-item__title {
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    color: var(--yellow);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .contact-item__text {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    letter-spacing: 0.1rem;
+    color: var(--grey);
+  }
+}
